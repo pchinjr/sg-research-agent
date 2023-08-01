@@ -64,7 +64,7 @@ def scrape_website(objective: str, url: str):
     data_json = json.dumps(data)
 
     # Send the POST request
-    post_url = f"https://chrome.browserless.io/content?token={browserless_api_key}"
+    post_url = f"https://chrome.browserless.io/content?token={browserless_api_key}&stealth=true"
     response = requests.post(post_url, headers=headers, data=data_json)
 
     # Check the response status code
